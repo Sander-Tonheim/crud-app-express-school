@@ -9,7 +9,7 @@ app.use(express.static("public"));
 
 app.get("/", async (req, res) => {
 	const connection = await createConnection();
-	const [results] = await connection.query("SELECT * FROM car WHERE car_type = 'Volvo' AND id > 10");
+	const [results] = await connection.query("SELECT * FROM car");
 	res.render("index", { cars: results });
 });
 
