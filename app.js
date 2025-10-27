@@ -18,7 +18,6 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/bruker", (req, res) => {
-	console.log(req.query);
 	res.render("bruker", { names: ["per", "Ole", "Olesya", "Ådne"], fact: true, req: req.query });
 });
 
